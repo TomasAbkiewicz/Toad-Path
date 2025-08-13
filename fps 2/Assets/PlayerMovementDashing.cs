@@ -88,7 +88,7 @@ public class PlayerMovementDashing : MonoBehaviour
         else
             rb.drag = 0;
 
-        TextStuff();
+        //TextStuff();
     }
 
     private void FixedUpdate()

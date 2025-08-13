@@ -6,9 +6,9 @@ public class Dashing : MonoBehaviour
 {
     [Header("References")]
     public Transform orientation;
-    public Camera PlayerCam; // Cambiado a Camera para evitar problemas de referencia
+    public Camera PlayerCam; 
     private Rigidbody rb;
-    private PlayerMovement pm;
+    private PlayerMovementDashing pm;
 
     [Header("Dashing")]
     public float dashForce = 20f;
@@ -38,7 +38,7 @@ public class Dashing : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        pm = GetComponent<PlayerMovement>();
+        pm = GetComponent<PlayerMovementDashing>();
 
         if (PlayerCam == null)
         {
@@ -60,7 +60,7 @@ public class Dashing : MonoBehaviour
         if (dashCdTimer > 0) return;
         dashCdTimer = dashCd;
 
-        pm.Dashing = true;
+        pm.dashing = true;
         pm.maxYSpeed = maxDashYSpeed;
 
         if (cam != null)
