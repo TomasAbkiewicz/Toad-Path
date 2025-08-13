@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39f0bb08006abd346b853b038ae4cff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
+  sensX: 200
+  sensY: 200
   orientation: {fileID: 1650268419}
 --- !u!1 &879495245
 GameObject:
@@ -303,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879495245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 1.9, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1687699610}
@@ -367,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006565710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.05, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1027982772}
@@ -404,26 +404,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236acf1c42e7ccd42ba000e810f26d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
-  sprintSpeed: 4
-  dashSpeed: 6
-  dashSpeedChangeFactor: 0
-  maxYSpeed: 0
-  groundDrag: 0
-  jumpForce: 0
-  jumpCooldown: 0
-  airMultiplier: 0
-  crouchSpeed: 0
-  crouchYScale: 0
+  walkSpeed: 4
+  sprintSpeed: 6.5
+  dashSpeed: 12
+  dashSpeedChangeFactor: 10
+  maxYSpeed: 20
+  groundDrag: 4
+  jumpForce: 5
+  jumpCooldown: 0.2
+  airMultiplier: 0.8
+  crouchSpeed: 2.5
+  crouchYScale: 0.5
   jumpKey: 32
   sprintKey: 304
   crouchKey: 306
-  playerHeight: 0
+  playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  maxSlopeAngle: 0
-  orientation: {fileID: 0}
+    m_Bits: 1024
+  maxSlopeAngle: 45
+  orientation: {fileID: 1650268419}
   state: 0
   dashing: 0
 --- !u!114 &1006565714
@@ -440,17 +440,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 1650268419}
   PlayerCam: {fileID: 304130903}
-  dashForce: 20
-  dashUpwardForce: 10
-  maxDashYSpeed: 100
-  dashDuration: 0.2
+  dashForce: 10
+  dashUpwardForce: 0
+  maxDashYSpeed: 7.5
+  dashDuration: 0.25
   cam: {fileID: 304130904}
-  dashFov: 100
+  dashFov: 95
   useCameraForward: 1
   allowAllDirections: 1
   disableGravity: 0
   resetVel: 1
-  dashCd: 1
+  dashCd: 1.5
   dashKey: 101
 --- !u!1 &1027982771
 GameObject:
