@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 304130903}
   - component: {fileID: 304130902}
   - component: {fileID: 304130904}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,43 +273,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 304130900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39f0bb08006abd346b853b038ae4cff6, type: 3}
+  m_Script: {fileID: 11500000, guid: c0c4ee065a42b2c47823c5e4d71a3e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 200
-  sensY: 200
+  sensY: 400
+  sensX: 400
   orientation: {fileID: 1650268419}
---- !u!1 &879495245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 879495246}
-  m_Layer: 0
-  m_Name: Chartacter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &879495246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879495245}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1687699610}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &980596663
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980596664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CameraPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980596663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1006565711}
@@ -350,9 +319,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1006565711}
   - component: {fileID: 1006565712}
-  - component: {fileID: 1006565714}
   - component: {fileID: 1006565713}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,14 +335,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006565710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 1.9, y: 2.539, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1027982772}
   - {fileID: 1650268419}
   - {fileID: 980596664}
-  m_Father: {fileID: 1687699610}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1006565712
 Rigidbody:
@@ -401,57 +369,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006565710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236acf1c42e7ccd42ba000e810f26d52, type: 3}
+  m_Script: {fileID: 11500000, guid: cc2358c82b3d2464ea5b280f3371e21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  sprintSpeed: 6.5
-  dashSpeed: 12
-  dashSpeedChangeFactor: 10
-  maxYSpeed: 20
-  groundDrag: 4
-  jumpForce: 5
-  jumpCooldown: 0.2
-  airMultiplier: 0.8
-  crouchSpeed: 2.5
-  crouchYScale: 0.5
+  moveSpeed: 7
+  groundDrag: 5
+  jumpForce: 12
+  jumpCooldown: 0.25
+  airMultiplier: 0.4
+  walkSpeed: 0
+  sprintSpeed: 0
   jumpKey: 32
-  sprintKey: 304
-  crouchKey: 306
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
-  maxSlopeAngle: 45
   orientation: {fileID: 1650268419}
-  state: 0
-  dashing: 0
---- !u!114 &1006565714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006565710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47721386a508f764ca0025028fd6d523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 1650268419}
-  PlayerCam: {fileID: 304130903}
-  dashForce: 10
-  dashUpwardForce: 0
-  maxDashYSpeed: 7.5
-  dashDuration: 0.25
-  cam: {fileID: 304130904}
-  dashFov: 95
-  useCameraForward: 1
-  allowAllDirections: 1
-  disableGravity: 0
-  resetVel: 1
-  dashCd: 1.5
-  dashKey: 101
 --- !u!1 &1027982771
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +397,7 @@ GameObject:
   - component: {fileID: 1027982775}
   - component: {fileID: 1027982774}
   - component: {fileID: 1027982773}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650268419}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1687699610}
   - component: {fileID: 1687699611}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,13 +532,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687699609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.071, z: 0}
+  m_LocalPosition: {x: 1.9, y: 0.53900003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 304130901}
-  - {fileID: 1006565711}
-  m_Father: {fileID: 879495246}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1687699611
 MonoBehaviour:
@@ -616,7 +548,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687699609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda987f3478f88542b11aacb72044e2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b7a01db740749042bf0f1b02a49a7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 980596664}
